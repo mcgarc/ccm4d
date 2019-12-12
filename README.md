@@ -3,6 +3,9 @@
 This document summarises the plan for an introductory document to the science
 performed on the CaF experiments in CCM.
 
+Please use the [AMS style
+guide](https://www.ams.org/publications/authors/AMS-StyleGuide-online.pdf).
+
 ## Atomic structure
 
 Need to think quite carefully about the starting point, what knowledge can be
