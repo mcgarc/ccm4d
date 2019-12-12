@@ -1,0 +1,190 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                 Preamble                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% This LaTeX document uses Cameron's LaTeX template (or some form of it) which
+% is ever-evolving.
+
+% --- Requirements ---
+%
+% Packages from Ubuntu [required for]:
+%     texlive-publishers [revtex4-1]
+%     texlive-science [siunitx]
+
+%\documentclass[a4paper]{article}
+\documentclass[
+ aps,
+ %prb,
+ a4paper,
+ showpacs,
+ superscriptaddress,
+ notitlepage,
+ %longbibliography,
+ nofootinbib,
+ preprint % gives 12pt font
+]{revtex4-1}
+
+% --- Macro dependencies ---
+%\usepackage{xcolor} % Uncomment if not using bibliography links
+
+% --- Common ---
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage{setspace} % For line spacing
+\usepackage{braket}
+\usepackage{physics}
+
+% --- More optional ---
+\usepackage{tabularx} 
+\usepackage{xpatch} % To patch the TOC
+%\usepackage{caption} % Helps with subfigs
+\usepackage{subcaption} % For subfigures
+
+% --- Bibliography Links ---
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\hypersetup{
+	colorlinks=true,
+  linkcolor=Blue,
+	citecolor=Blue,
+	urlcolor=Blue
+}
+
+% --- Tikz ---
+% Have to load tikz after xcolor
+\usepackage{tikz}
+
+% --- Bib title (not line) ---
+\def\bibsection{\section*{\refname}}
+
+% --- Macros ---
+%\newcommand{\diff}{\mathrm{d}} USE \dd (physics) instead
+\newcommand{\cm}[1]{\textcolor{blue}{#1}} % For my comments
+\newcommand{\ph}[1]{\textcolor{green}{#1}} % Placeholders
+\newcommand{\thesis}[1]{\textcolor{red}{#1}} % Placeholders
+%\renewcommand{\cm}[1]{} % Uncomment to remove my comments
+%\renewcommand{\thesis}[1]{} % Uncomment to remove markers for thesis work
+\newcommand{\incfig}[2]{\includegraphics[width=#1\textwidth]{#2}}
+\newcommand{\myeqref}[1]{eqn~\eqref{#1}}
+\newcommand{\mytabref}[1]{table~\ref{#1}}
+\newcommand{\myeqrefs}{eqns}
+\newcommand{\myfigref}[1]{Fig.~\ref{#1}}
+
+% Chemicals
+\newcommand{\CaF}{CaF}
+\newcommand{\CO}{CO}
+\newcommand{\YbF}{YbF}
+\newcommand{\SrF}{SrF}
+\newcommand{\esRb}{\textsuperscript{87}Rb}
+\newcommand{\efRb}{\textsuperscript{85}Rb}
+\newcommand{\ottCs}{\textsuperscript{133}Cs}
+\newcommand{\RbCs}{RbCs}
+
+% --- Units ---
+% Custom units
+\DeclareSIUnit\gauss{G}
+\DeclareSIUnit\inch{inch}
+
+% --- Line spacing ---
+\linespread{1.5}
+
+% --- Table of contents ---
+% Patch TOC to exclude *-ed sections (default behaivour in most classes, but
+% changed by design in revtex). Also exclude (sub)subsections
+% Patch is quite specific to revtex
+\makeatletter
+%\def\l@subsection#1#2{} % Uncomment to exclude subsection
+%\def\l@subsubsection#1#2{} % Uncomment to exclude subsubsection
+\patchcmd{\@ssect@ltx}
+    {\addcontentsline{toc}{#1}{\protect\numberline{}#8}}
+    {}
+    {}
+    {}
+\makeatother
+
+% --- Left-align captions ---
+\makeatletter
+\renewcommand\@makecaption[2]{%
+  \par
+  \vskip\abovecaptionskip
+  \begingroup
+   \small\rmfamily
+    \begingroup
+     \samepage
+     \flushing
+     \let\footnote\@footnotemark@gobble
+     \@make@capt@title{#1}{#2}\par
+    \endgroup
+  \endgroup
+  \vskip\belowcaptionskip
+}
+\makeatother
+
+% Uncomment and fill if using article
+%\title{Early stage assessment: molecule chip}
+%\author{Cameron McGarry\\ 
+%Supervisors: Mike Tarbutt and Ben Sauer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Begin Document and Title/ Abstract     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% Title page
+
+\pagenumbering{gobble}
+\begin{titlepage}
+  \begin{center}
+    \vspace*{1cm}
+      \textbf{Centre for cold matter for dummies} \\
+    \vspace{1.5cm}
+      \textbf{Author} \\
+    \vspace{0.5cm}
+       {Imperial College London, Department of Physics} \\
+  \end{center}
+\end{titlepage}
+
+% Abstract
+\section*{Abstract}
+\input{./sections/abs}
+\clearpage
+
+% TOC
+\tableofcontents
+\clearpage
+
+% Numbers on
+\pagenumbering{arabic}
+%NOTE This must be manually set so that numbering starts on title page
+\setcounter{page}{4} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                Body Start                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+\input{sections/intro}
+
+\section{Atomic structure}
+\label{chiptraps}
+\input{sections/atoms}
+
+\section{Basics of diatomic molecules}
+\label{experiment}
+\input{sections/diatomic_basics}
+
+\section{Sepctroscopy of diatomic molecules}
+\label{outlook}
+\input{sections/diatomic_spectroscopy}
+
+\clearpage
+
+\section*{Acknowledgements}
+\input{./sections/acks}
+
+% TODO bibliography
+%\bibliographystyle{apsrev4-1}
+%\bibliography{bib}
+\end{document}
