@@ -1,0 +1,46 @@
+In this section we will see how the combined vibrational, rotational and
+electronic structure can be seen in the spectra of a diatomic molecules. The
+description given here will not be a full quantum treatment (see H \& W ch. 17).
+
+\subsection{Nuclear motion}
+
+\subsubsection{Vibrational spectrum}
+
+Light incident on a diatomic molecule will induce a dipole moment
+%
+\begin{equation}
+p(t) = \alpha E_0 \cos(2\pi\nu_p t)
+\end{equation}
+%
+where $\alpha$ is the polarisability of the molecule, and $E_0$ and $\nu_p$ are
+the amplitude and frequency of the electric field respectively.
+
+For all diatomic molecules, the polarisability is a function of the
+inter-nuclear separation \cite{}, which can be expanded to first order
+%
+\begin{equation}
+\alpha = \alpha(R) = \alpha(R_0) + \frac{\dd \alpha}{\dd R}(R - R_0).
+\end{equation}
+%
+This is where the vibration of the molecule comes into play, because of course
+$R$ changes through time as the molecule vibrates. We can write down
+%
+\begin{equation}
+R = R_0 + q \cos (2\pi \nu_\text{vib} t)
+\end{equation}
+and hence the dipole moment is
+\begin{equation}
+p(t) = \left[ \alpha(R_0) + \frac{\dd \alpha}{\dd R} q\cos (2\pi\nu_\text{vib}t)
+\right] E_0 \cos(2\pi\nu_p t).
+\end{equation}
+Expanding this out we retrieve
+\begin{equation}
+p(t) = \alpha(R_0)E_0\cos(2\pi\nu_p t) + \frac{1}{2}\frac{\dd \alpha}{\dd R}
+E_0 q \left\{ \cos\left[ 2\pi(\nu_p + \nu_\text{vib})t\right]
++ \cos\left[ 2\pi(\nu_p - \nu_\text{vib})t\right] \right\}.
+\end{equation}
+
+Hence from the first order of $\alpha(R)$ we have found that the vibrational
+spectrum of a diatomic molecule has a principle line at $\nu_p$ and sidebands at
+$\nu_p \pm \nu_\text{vib}$. Clearly expansion to higher orders of $\alpha(R)$
+will yield higher-order sidebands. This is the \emph{Raman spectrum} of the
