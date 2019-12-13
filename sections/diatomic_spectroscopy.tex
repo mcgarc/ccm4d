@@ -44,3 +44,48 @@ Hence from the first order of $\alpha(R)$ we have found that the vibrational
 spectrum of a diatomic molecule has a principle line at $\nu_p$ and sidebands at
 $\nu_p \pm \nu_\text{vib}$. Clearly expansion to higher orders of $\alpha(R)$
 will yield higher-order sidebands. This is the \emph{Raman spectrum} of the
+molecule. Negative sidebands are \emph{Stokes lines} and positive are
+\emph{anti-Stokes}.
+%
+The Raman spectrum (including the rotational contribution, which we have not yet
+discussed) is shown in Figure \ref{diaspec:fig:totalraman}.
+
+\begin{figure}
+  % TODO
+  \caption{This figure should show the Raman spectrum, similar to H\&W 12.1}
+  \label{diaspec:fig:totalraman}
+\end{figure}
+
+When a photon scatters from a molecule, the molecule is excited to a virtual
+level. When the excited state decays, it can fall back into the same level
+(\emph{Rayleigh scattering}), a higher vibrational state (\emph{Stokes
+scattering}) or a lower vibrational level (\emph{anti-Stokes scattering}). These
+processes are illustrated in \myfigref{diaspec:fig:ramanscatter}. This process
+is known as \emph{Raman scattering}.
+
+\begin{figure}
+  % TODO
+  \caption{This figure should show the possible Raman scattering processes, some
+  hybrid of the Wikipedia fig. and H\&W fig. 12.3.}
+  \label{diaspec:fig:ramanscatter}
+\end{figure}
+
+The relative intensity of each line in the Stokes spectrum can be found by
+considering the relative population of each vibrational level. These will be
+populated according to a Boltzman distribution, i.e.
+%
+\begin{equation}
+  \frac{I_\text{anti}}{I_\text{Stokes}} = \frac{n(v=1)}{n(=0)} = e^{-\beta h
+  \nu_\text{vib}}.
+\end{equation}
+%
+A typical value of $\nu_\text{vib}$ is \SI{30}{\tera\hertz} and at room
+temperature (\SI{300}{\kelvin}) this results in a 0.7\% relative intensity. At
+ultracold temperatures (\SI{10}{\micro \kelvin}) the relative intensity is
+approximately zero ($e^{- 10^8}$).
+
+\subsubsection{Rotational spectrum}
+
+We will now describe the origin of the scattering lines either side of the
+Rayleigh and (anti-)Stokes lines in the Raman spectrum depicted in
+\myref{diaspec:fig:totalraman}.
