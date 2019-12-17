@@ -2,11 +2,92 @@ In this section we will see how the combined vibrational, rotational and
 electronic structure can be seen in the spectra of a diatomic molecules. The
 description given here will not be a full quantum treatment (see H \& W ch. 17).
 
-\subsubsection{Elcectronic structure}
+\subsection{Electronic structure}
+
+% TODO Density functional theory (DFT) for compmuting ground states
+
+As discussed in section \ph{reference, or fix} the electronic structure of a
+diatomic molecule can be thought of in terms of the two constituent atoms being
+brought together from infinite separation. If the inter-nuclear separation is
+$R$ then clearly when $R \to \infty$ we would expect the electronic structure to
+be that of two separate atoms, as described in texts such as
+Foot~\cite{Foot2005}.
+
+\ph{We have already discussed} decreasing $R$ for two \Hy atoms in their ground
+state, which guides us to the gerade and ungerade electron wavefunctions for the
+ground state of a \dihydrogen molecule. We will now consider the result of bringing
+together larger atoms.
+
+\subsubsection{Molecular orbital theory}
+
+%TODO I wrote a fair bit of this based on HandW sec. 13 and talking to Freddy,
+%needs proper citation and a bit more research.
+
+%Molecular orbital (MO) theory is describes to good (how good?) approxiation the electron
+%orbitals for small (how small)
+%homonuclear (really? if so why not heteronuclear?) diatmoic molecules.
+Recall that for \dihydrogen in the ground state, the 1s atomic orbital was split into the
+even and uneven molecular orbitals
+%
+\begin{equation}
+  \sigma_\text{g,u} 1\mathrm{s} = \frac{1}{\sqrt{2}} ( 1\mathrm{s}_a \pm
+  1\mathrm{s}_b ).
+\end{equation}
+%
+What will we see happen for higher orbitals? Consider \dilithium. We know that
+for \lithium the atomic structure is $\text{1s}^2\text{2s}$. We can anticipate
+that the 1s orbitals will mix in the same way as before, and that the 2s
+orbitals will independently mix in the same way. We now have four molecular
+orbitals, which we label 2s$\sigma^*$, 2s$\sigma$, 1s$\sigma^*$, and 1s$\sigma$.
+The corresponding molecular orbit diagram is shown in
+\myfigref{diaspec:fig:LiMO}.
+
+\begin{figure}
+  % TODO
+  \caption{This figure should show the Li MO diagram as can be foudn on the MO
+  WIki page.}
+  \label{diaspec:fig:LiMO}
+\end{figure}
+
+The orbitals will be filled according to the same rules as for atoms~\cite{}:
+%
+% TODO expand
+\begin{enumerate}
+    \item Aufbau
+    \item Pauli
+    \item Hund
+\end{enumerate}
+%
+We can see that in \dilithium that there are four electrons in bonding orbitals
+and only two in anti-bonding orbitals. The overall energy contribution of the
+bond is negative, so \dilithium is a stable molecule.
+
+Now briefly consider \ce{He2}, shown in \myfigref{diaspec:fig:HeMO}. Here the
+energy contribution to the bond is net positive (there are an equal number of
+electrons in bonding and anti-bonding orbitals) so this is an unstable
+configureation. This is as we expect, \ce{He} is a noble gas after all. However,
+if one of the 1s$\sigma^*$ electrons is excited into 2s$\sigma$ then the
+\ce{He2} molecule becomes stable. HTis is called an excimer.
+
+\begin{figure}
+  % TODO
+  \caption{This figure should show the He MO diagram as in HW fig. 13.3.}
+  \label{diaspec:fig:HeMO}
+\end{figure}
+
+% TODO : N2 and O2, maybe should do something smaller without the swap?
+
+% Next part should be something like MO theory doesn't cover absolutely
+% everything. Swapping at N2 cutoff and go over HW fig. 13.5
+
+% Morse
+% Leonard-Jones
+
+% Types of bonding (HW sec 13.2)
 
 \subsection{Nuclear motion}
 
-\subsubsection{Raman spectroscopy}
+\subsection{Raman spectroscopy}
 
 Raman scattering describes the process of the interaction of off-resonant light
 with a molecule.  Light incident on a diatomic molecule will induce a dipole
