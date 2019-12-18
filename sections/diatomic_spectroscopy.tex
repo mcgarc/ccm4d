@@ -13,10 +13,10 @@ $R$ then clearly when $R \to \infty$ we would expect the electronic structure to
 be that of two separate atoms, as described in texts such as
 Foot~\cite{Foot2005}.
 
-\ph{We have already discussed} decreasing $R$ for two \Hy atoms in their ground
-state, which guides us to the gerade and ungerade electron wavefunctions for the
-ground state of a \dihydrogen molecule. We will now consider the result of bringing
-together larger atoms.
+\ph{We have already discussed} decreasing $R$ for two \ce{H} atoms in their
+ground state, which guides us to the gerade and ungerade electron wavefunctions
+for the ground state of a \ce{H2} molecule. We will now further justify this
+result and discuss larger molecules.
 
 \subsubsection{Molecular orbital theory}
 
@@ -26,7 +26,7 @@ together larger atoms.
 %Molecular orbital (MO) theory is describes to good (how good?) approxiation the electron
 %orbitals for small (how small)
 %homonuclear (really? if so why not heteronuclear?) diatmoic molecules.
-Recall that for \dihydrogen in the ground state, the 1s atomic orbital was split into the
+Recall that for \ce{H2} in the ground state, the 1s atomic orbital was split into the
 even and uneven molecular orbitals
 %
 \begin{equation}
@@ -34,13 +34,14 @@ even and uneven molecular orbitals
   1\mathrm{s}_b ).
 \end{equation}
 %
-What will we see happen for higher orbitals? Consider \dilithium. We know that
-for \lithium the atomic structure is $\text{1s}^2\text{2s}$. We can anticipate
-that the 1s orbitals will mix in the same way as before, and that the 2s
-orbitals will independently mix in the same way. We now have four molecular
-orbitals, which we label 2s$\sigma^*$, 2s$\sigma$, 1s$\sigma^*$, and 1s$\sigma$.
-The corresponding molecular orbit diagram is shown in
-\myfigref{diaspec:fig:LiMO}.
+What will we see happen for higher orbitals? Consider \ce{Li2+}. We know that
+for \ce{Li} the atomic structure is $\text{1s}^2\text{2s}$. We can anticipate
+that nothing will change for the 1s orbitals, we will still get the even and
+uneven solutions as in equation \ph{TODO}. Going one step further, there is
+nothing inherently different for the 2s orbitals, so they will also form one
+bonding and one anti-bonding orbital. We now have four molecular orbitals, which
+we label 2s$\sigma^*$, 2s$\sigma$, 1s$\sigma^*$, and 1s$\sigma$.  The
+corresponding molecular orbit diagram is shown in \myfigref{diaspec:fig:LiMO}.
 
 \begin{figure}
   % TODO
@@ -58,16 +59,16 @@ The orbitals will be filled according to the same rules as for atoms~\cite{}:
     \item Hund
 \end{enumerate}
 %
-We can see that in \dilithium that there are four electrons in bonding orbitals
+We can see that in \ce{Li2+} that there are four electrons in bonding orbitals
 and only two in anti-bonding orbitals. The overall energy contribution of the
-bond is negative, so \dilithium is a stable molecule.
+bond is negative, so \{Li2+}  is a stable molecule.
 
 Now briefly consider \ce{He2}, shown in \myfigref{diaspec:fig:HeMO}. Here the
 energy contribution to the bond is net positive (there are an equal number of
 electrons in bonding and anti-bonding orbitals) so this is an unstable
 configureation. This is as we expect, \ce{He} is a noble gas after all. However,
 if one of the 1s$\sigma^*$ electrons is excited into 2s$\sigma$ then the
-\ce{He2} molecule becomes stable. HTis is called an excimer.
+\ce{He2} molecule becomes stable. This is an example of an excimer.
 
 \begin{figure}
   % TODO
@@ -75,11 +76,85 @@ if one of the 1s$\sigma^*$ electrons is excited into 2s$\sigma$ then the
   \label{diaspec:fig:HeMO}
 \end{figure}
 
-% TODO : N2 and O2, maybe should do something smaller without the swap?
+Higher molecular orbitals will also be formed from a linear combination of
+atomic orbitals (LCAO). In other words we write the wave function of an orbital
+$\psi_i$ in terms of the atomic orbitals of similar energy $\phi_i$
+%
+\begin{equation}
+  \psi_i = \sum_j c_{ji} \phi_j
+\end{equation}
+%
+where we need to determine the coefficients $c_{ji}$. This can be achieved by
+using the variational principle. We have already assumed one result of LCAO: the
+even and odd solutions for \ce{H2+} \ph{ref. eqn.} This result can now be
+derived as an example.
 
-% Next part should be something like MO theory doesn't cover absolutely
+% From: https://chem.libretexts.org/Courses/New_York_University/CHEM-UA_127%3A_Advanced_General_Chemistry_I/14%3A_Linear_combination_of_atomic_orbitals
+
+We know that the two atomic orbtials are the 1s states of hydrogen
+%
+\begin{equation}
+  \phi_j(r) = \frac{e^{-\abs{r - r_i}/a_0}}{\sqrt{\pi a_0^3}}
+\end{equation}
+%
+and the electronic part of the Hamiltonian is 
+%
+\begin{equation}
+  H_e = - \frac{e^2}{4\pi\epsilon_0}\left(\frac{1}{\abs{r-r_1}} +
+  \frac{1}{\abs{r-r_2}}\right).
+\end{equation}
+% This isn't really the variational principle, the next bit is...
+\ph{Using the variational principle}, the energy of the state $\psi_j$ is
+%
+\begin{equation}
+  E_j = \frac{\int \psi_j^\dagger H_e \psi_j \dd V}{\int \psi_j^\dagger \psi_j.
+  \dd V}
+\end{equation}
+%
+We seek to minimise $E_j$ with respect to $c_{ji}$. So re-write as
+%
+\begin{equation}
+  E_j = \frac{H_{11}(c_{j1}^2 + c_{j2}^2) + 2H_{12}c_{j1}c_{j2}}{c_{j1}^2
+  + c_{j2}^2 + 2Sc_{j1}c_{j2}}
+\end{equation}
+%TODO make sure S= < phi_1 | phi_2> is defined above (maybe called J or K?
+%
+where we define the integral $H_{ij} = \int \phi_i^\dagger H_e \phi_j \dd V$ and
+note that $H_{11} = H_{22}$. Minimisation is left as an exercise, the reader
+should find that
+%
+\begin{equation}
+  c_{j1} = \pm c_{j2}.
+\end{equation}
+%
+Together with the normalisation condition, we have two possible solutions, so
+$\j \in \{ +, - \}$, and
+%
+\begin{equation}
+  \psi_\pm = \frac{1}{\sqrt{2}}(\phi_1 \pm \phi_2)
+\end{equation}
+%
+just as we supposed in \ph{ref equation or section}.
+
+Now the energies can be found by solving the Schrodinger equation, to find that
+%
+\begin{equation}
+  E_\pm(R) = \frac{H_{11}(R) \pm H_{12}(R)}{1 + S(R)} + \frac{e^2}{4 \pi
+  \epsilon_0 R}.
+\end{equation}
+%
+This isn't bad as a first approxiation of the energies...
+
+% Talk about ecperimental discrepancy for H2+ and then
+% start to think about segway to next section/ bring in need for experimental
+% data.
+%
+% How do point symmetries tie in?
+% 
+% N2 and O2, maybe should do something smaller without the swap?
+% Should include that MO theory doesn't cover absolutely
 % everything. Swapping at N2 cutoff and go over HW fig. 13.5
-
+%
 % Morse
 % Leonard-Jones
 
