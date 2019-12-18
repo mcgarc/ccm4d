@@ -61,7 +61,7 @@ The orbitals will be filled according to the same rules as for atoms~\cite{}:
 %
 We can see that in \ce{Li2+} that there are four electrons in bonding orbitals
 and only two in anti-bonding orbitals. The overall energy contribution of the
-bond is negative, so \{Li2+}  is a stable molecule.
+bond is negative, so \ce{Li2+}  is a stable molecule.
 
 Now briefly consider \ce{He2}, shown in \myfigref{diaspec:fig:HeMO}. Here the
 energy contribution to the bond is net positive (there are an equal number of
@@ -76,9 +76,11 @@ if one of the 1s$\sigma^*$ electrons is excited into 2s$\sigma$ then the
   \label{diaspec:fig:HeMO}
 \end{figure}
 
+% TODO Is this really Hartree-Fock? I think it is...
+
 Higher molecular orbitals will also be formed from a linear combination of
 atomic orbitals (LCAO). In other words we write the wave function of an orbital
-$\psi_i$ in terms of the atomic orbitals of similar energy $\phi_i$
+$\psi_i$ in terms of the overlapping atomic orbitals of similar energy $\phi_i$
 %
 \begin{equation}
   \psi_i = \sum_j c_{ji} \phi_j
@@ -139,7 +141,7 @@ just as we supposed in \ph{ref equation or section}.
 Now the energies can be found by solving the Schrodinger equation, to find that
 %
 \begin{equation}
-  E_\pm(R) = \frac{H_{11}(R) \pm H_{12}(R)}{1 + S(R)} + \frac{e^2}{4 \pi
+  E_\pm(R) = \frac{H_{11}(R) \pm H_{12}(R)}{1 \pm S(R)} + \frac{e^2}{4 \pi
   \epsilon_0 R}.
 \end{equation}
 %
@@ -147,13 +149,17 @@ This isn't bad as a first approxiation of the energies...
 
 % Talk about ecperimental discrepancy for H2+ and then
 % start to think about segway to next section/ bring in need for experimental
-% data.
+% data. Or post-HF methods
 %
 % How do point symmetries tie in?
+%
+% Heteronuclear symmetries?
 % 
 % N2 and O2, maybe should do something smaller without the swap?
 % Should include that MO theory doesn't cover absolutely
 % everything. Swapping at N2 cutoff and go over HW fig. 13.5
+%
+% Prediction of paramegntic O2
 %
 % Morse
 % Leonard-Jones
