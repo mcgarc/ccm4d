@@ -231,10 +231,70 @@ above.
 
 \subsubsection{Extension to ionic bonds}
 
-\subsubsection{Labelling the electron states}
+\subsubsection{Labelling electron states}
+
+% TODO Need some pictures in here I think
+
+We have already introduced the $\sigma$ and $\pi$ labels for electronic states,
+but we have not yet stated their meaning. These states arose from LCAOs, and as
+such the labels we chose are a variation on the familiar spdf... labelling
+scheme for atomic states. 
+
+The spdf... labels correspond to the atomic orbital angular momentum (OAM)
+quantum number $l \in \{0,1,2,3\ldots \}$. However for molecules $l$ is no
+longer a good quantum number, as the spherical symmetry is broken by the
+presence of an inter-nuclear axis. This symmetry-breaking does not affect the
+$m_l$ quantum number, since this is just the projection onto the axis.
+
+Hence the $\sigma\pi\delta\phi$ notation corresponds to a new quantum number
+$\lambda = \abs{m_l}$, where the sign of $m_l$ has no significance because the
+energy from the orbiting electron does not change with the direction of the
+orbit.\footnote{This is different to $m_l$ for an atom undergoing Zeeman
+splitting because in the molecular case the splitting of $l$ degeneracy is due
+to an electric field, not a magnetic one.} \cm{I feel this footnote is quite an
+important concept that I don't really understand and should.}
+% Probably related to some misunderstanding about the Stark and Zeeman effects
+% in atoms too. Only see quadratic Stark effect in atoms, which has no sign(m_l)
+% dependence either (I think). [Tangent, this means we should be able to see
+% linear Stark effect in heteronuclears, but not homonuclears, worth revisiting!
+% TODO]
+%
+\ph{We have already seen above that} the electron states for homonuclear diatomics
+can be expressed using the quantum numbers $\lambda$, $n$, $l$, where the last
+two numbers are those of the atomic states at infintie nuclear distance.
 
 % Quantum states: Lambda and Sigma numbers, capital Sigma, Pi, Lambda states
 % (c.f. spdf..)
+
+If we have a molecule with more than one valence electron then the same
+projection onto the axis will occur for the total OAM vector of all the
+electrons. For this we introduce a new quantum number $\Lambda =
+\abs{\sum{\lambda_i}}$, where $\lambda_i$ are the individual electrons' OAM
+components in $z$. These can be negative, because it is the total OAM which
+determines the energy.
+
+% TODO Exemplify further
+
+Our new quantum number can take values $\Lambda \in \{0,1,2,3,\ldots\}$ and to
+go with each of these we have new spectroscopic notation $\Sigma\Pi\Delta\Phi$.
+
+For spin, there is no coupling to the electric field but the symmetry breaking
+still takes effect. The quantum number is therefore $\Sigma \in \{-S, 1-S,\ldots
+S-1, S\}$ where $S$ is the total electron spin ($2S = \text{no. of electrons}$)
+and $\Sigma$ should not be confused with the configuration symbol for $\Lambda =
+0$.
+
+
+% TODO 
+We have already seen that the parity is marked by a subscript g or u.
+
+% TODO
+In general we write states in the form $^{(2\Sigma + 1)}[\Lambda]_{p}$. Where we
+use $[]$ to indicate that $\Lambda$ should be replaced with its equivalent
+spectroscopic symbol, and $p \in {g, u}$ is the partiy.
+%
+\ph{Need some proper examples.}
+
 
 \subsubsection{Electronic potential of diatomic molecules}
 
