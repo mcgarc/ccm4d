@@ -13,12 +13,7 @@ diatomic molecule can be thought of in terms of the two constituent atoms being
 brought together from infinite separation. If the inter-nuclear separation is
 $R$ then clearly when $R \to \infty$ we would expect the electronic structure to
 be that of two separate atoms, as described in texts such as
-Foot~\cite{Foot2005}.
-
-\ph{We have already discussed} decreasing $R$ for two \ce{H} atoms in their
-ground state, which guides us to the gerade and ungerade electron wavefunctions
-for the ground state of a \ce{H2} molecule. We will now further justify this
-result and discuss larger molecules.
+Foot~\cite{Foot2005}. We will now extend this idea to larger molecules.
 
 \subsubsection{Molecular orbital theory}
 
@@ -27,7 +22,16 @@ result and discuss larger molecules.
 
 Molecular orbital (MO) theory is a tool that will give us some intuition as to
 the way that higher $n$ and $l$ molecular orbital states are formed from a
-linear combination of atomic orbitals.
+linear combination of atomic orbitals. We can represent this concept for \ce{H2}
+with an MO (\ph{there is another name for this that I have forgotten...})
+diagram as shown in \myfigref{diaspec:fig:HMO}.
+
+\begin{figure}
+  % TODO
+  \caption{This figure should show the H diagram as can be foudn on the MO
+  WIki page.}
+  \label{diaspec:fig:HMO}
+\end{figure}
 
 Recall that for \ce{H2} in the ground state, the 1s atomic orbital was split into the
 even and uneven molecular orbitals
@@ -37,14 +41,18 @@ even and uneven molecular orbitals
   1\mathrm{s}_b ).
 \end{equation}
 %
-What will we see happen for higher orbitals? Consider \ce{Li2+}. We know that
-for \ce{Li} the atomic structure is $\text{1s}^2\text{2s}$. We can anticipate
-that nothing will change for the 1s orbitals, we will still get the even and
-uneven solutions as in equation \ph{TODO}. Going one step further, there is
-nothing inherently different for the 2s orbitals, so they will also form one
-bonding and one anti-bonding orbital. We now have four molecular orbitals, which
-we label 2s$\sigma^*$, 2s$\sigma$, 1s$\sigma^*$, and 1s$\sigma$.  The
-corresponding molecular orbit diagram is shown in \myfigref{diaspec:fig:LiMO}.
+For higher orbitals, start by considering \ce{Li2}. We can anticipate that the
+molecular ground state will be a combination of the ground state atomic orbitals
+just as for \ce{H2}. In the limit that our \ce{Li2} was multiply ionised such
+that it has only one electron, we would expect that electron to inhabit the same
+$1\text{\sigma}$ state as we discussed for \ce{H2}. Indeed, the linear
+combination of 1s states allows gives space for four electrons. Where do the
+remaining two go?
+
+Just as the 1s states mixed, so too will the 2s states. This yields the
+$2\text{\sigma}$ and $2\text{\sigma}^*$ states depicted in
+\myfigref{diaspec:fig:LiMO}. Again, we can expect these to be formed of a linear
+combination of the atomic 2s states, in complete analogy with the 1s states.
 
 \begin{figure}
   % TODO
@@ -62,16 +70,18 @@ The orbitals will be filled according to the same rules as for atoms~\cite{}:
   \item Hund (electron spins align so as to maximise total spin)
 \end{enumerate}
 %
-We can see that in \ce{Li2+} that there are four electrons in bonding orbitals
+We can see that in \ce{Li2} that there are four electrons in bonding orbitals
 and only two in anti-bonding orbitals. The overall energy contribution of the
-bond is negative, so \ce{Li2+}  is a stable molecule.
+bond is negative, so \ce{Li2}  is a stable molecule.
 
-Now briefly consider \ce{He2}, shown in \myfigref{diaspec:fig:HeMO}. Here the
-energy contribution to the bond is net positive (there are an equal number of
-electrons in bonding and anti-bonding orbitals) so this is an unstable
-configureation. This is as we expect, \ce{He} is a noble gas after all. However,
-if one of the 1s$\sigma^*$ electrons is excited into 2s$\sigma$ then the
-\ce{He2} molecule becomes stable. This is an example of an excimer.
+You may wonder why we skipped \ce{He} and went straight into the larger element
+\ce{Li}. The MO diagram of \ce{He2} is shown in \myfigref{diaspec:fig:HeMO},
+where you will see that the number of bonding and anti-bonding electrons are
+equal. Hence the bond does not reduce the energy of the two atoms and \ce{He2}
+is unstable. This to be expected, \ce{He} is a noble gas after all.
+
+However, if one of the 1s$\sigma^*$ electrons is excited into 2s$\sigma$ then
+the \ce{He2} molecule becomes stable. This is an example of an excimer.
 
 \begin{figure}
   % TODO
