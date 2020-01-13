@@ -335,6 +335,8 @@ for different states.
 % Morse
 % Leonard-Jones
 
+\ph{Show absorption and fluorseence spectra, e.g. HandW figs 14.7 and 14.8}
+
 \subsection{Nuclear motion}
 
 The molecule's nuclei will move around in the potential created by its
@@ -356,7 +358,8 @@ can write the energy of the oscillator as
 vibrational state of the molecule. As $v \rightarrow \infty $ the molecule
 reaches the disassociation limit and separates.\footnote{If we had assumed a
 perfect harmonic oscillator this disassociation limit would not exist, which
-would cause us no end of problems later.}
+would cause us no end of problems later.} \cm{Drop this footnote, I think we
+should make this approx. and go to SHO}
 
 We can now start to think about the sorts of transitions we can expect to see in
 a qualitative way by drawing the wavefunctions of the anharmonic states.
@@ -379,12 +382,30 @@ As well as vibration, we can expect the molecule to rotate. This leads to an
 anergy contribution of 
 %
 \begin{equation}
-  E_J = BJ(J+1)
+  E_J = BhcJ(J+1)
 \end{equation}
 %
 with $J$ as the rotational quantum number and $B$ as the energy of the lowest
-rotational state. We can expect $B \lleq \hbar\omega_e $, so these rotational
+rotational state. We can expect $Bhc \lleq \hbar\omega_e $, so these rotational
 energy levels make a very small shift to the vibrational states.
+
+\subsubsection{Ro-vibrational transitions}
+
+The total energy of a molecular state is
+%
+\cm{need to make these symbols work with the above, esp. X}
+\begin{equation}
+  E(X, v, J) = E_\text{vib}(X, v) + E_\text{rot}(J) \\
+  = \hbar\omega_X(v + \frac{1}{2}) + BhcJ(J+1).
+\end{equation}
+%
+% To continue, impose selection rules and then we havve P and R branches. How
+% does Q come in? ALso need something about transitions that don't involeve
+% change of electrical state, see Hooker sec. 3 (I think).
+
+\subsubsection{Fortrat diagrams}
+
+% TODO
 
 \subsection{Raman spectroscopy}
 
