@@ -10,8 +10,8 @@ anticipate some electrostatic interaction between the various charges. The
 system has a Hamiltonian
 %
 \begin{equation}
-  H = \frac{e^2}{4\pi\epsilon_0 R} - \frac{e^2}{4\pi\epsilon_0 r_1} -
-  \frac{e^2}{4\pi\epsilon_0 r_2} +H_\text{kinetic}
+  H = H_\text{kinetic} + \frac{e^2}{4\pi\epsilon_0 R} -
+  \frac{e^2}{4\pi\epsilon_0 r_1} - \frac{e^2}{4\pi\epsilon_0 r_2}
 \end{equation}
 %
 where $\mathbf{r}_i$ is the displacement of the electron from proton $i$ and
@@ -25,7 +25,18 @@ the centre of mass will not change the wavefunction. We therefore propose the
 solution
 %
 \begin{equation}
-\psi_\pm(\mathbf{r}_1, \mathbf{r}_2) = \phi(\mathbfr}_1) \pm \phi(\mathbf{r}_2).
+  \psi_\pm(\mathbf{r}_1, \mathbf{r}_2) = \phi(\mathbf{r}_1) \pm \phi(\mathbf{r}_2).
 \end{equation}
 %
+\ph{Energy calculation}
 
+\ph{Bonding/ anti-bonding, gerade and ungerade for $\pm$}
+
+\subsection{Kinetic terms}
+
+Recall the kinetic term of the Hamiltonian in \ph{ref. eqn.}. This can be
+written in the COM frame of the protons as
+%
+\begin{equation}
+  H_\text{kinetic} = - \frac{\hbar^2}{2\mu} \nabla^2_\mathbf{R} % and electron term?
+\end{equation}
