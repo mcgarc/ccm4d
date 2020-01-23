@@ -40,3 +40,34 @@ written in the COM frame of the protons as
 \begin{equation}
   H_\text{kinetic} = - \frac{\hbar^2}{2\mu} \nabla^2_\mathbf{R} % and electron term?
 \end{equation}
+it is instructive to expand the $\nabla_\mathrm{R}$ operator, as this will
+expose the radial and rotational parts of the kinetic Hamiltonian,
+\begin{equation}
+  H_\text{kinetic} = \frac{\hbar^2}{2\mu R^2}\left[ -\frac{\dd}{\dd R}\left(R^2
+  \frac{\dd}{\dd R} \right) + \mathbf{N^2}.
+  \label{basics:eq:Hkinetic}
+\end{equation}
+Here we have introduced $\mathbf{N}$, which is the orbital angular momentum
+operator for the nucleii. i.e. the kinetic Hamiltonian has two parts:
+oscillatory motion in the radial direction, and rotational (the first and second
+terms respectively). The total Hamiltonian is
+\begin{equation}
+  H = H_\text{electronic} + H_\text{vibrational} + H_\text{rotational}.
+\end{equation}
+% TODO Do I need to clarify what each term corresponds to?
+
+A Hamiltonian like this could perhaps be solved by a separated wave function
+\begin{equation}
+  \ket{\psi} = \ket{\psi_e} \ket{\psi_v} \ket{\psi_r}
+\end{equation}
+however, this is not possible in this case, because the electronic Hamiltonian
+term has some dependence on $R$. 
+
+It is at this point that we make the \emph{Born-Oppenheimer approximation}: we
+assume that this dependence of the electronic wavefunction on $R$ can be
+ignored, so that a separated wavefunction can solve the Schr\"odinger equation
+for our Hamiltonian. In making this approximation we are essentialy claiming
+that the timescale of nuclear motion and electronic motion are vastly different:
+the nucleii are stationary on the timescale of electronic motion (we will
+justify this below). This means that $R$ can be treated like a parameter of the
+electronic state.
