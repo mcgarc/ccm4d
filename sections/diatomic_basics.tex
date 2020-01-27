@@ -7,16 +7,15 @@ the atom has already been discussed.
 
 If we now decrease $R$ so that the atom and the proton come together, we can
 anticipate some electrostatic interaction between the various charges. The
-system has a Hamiltonian
+system has a Hamiltonian $H = H_n + H_e$, with nuclear and electronic terms
+respectively. We begin by considering
 %
 \begin{equation}
-  H = H_\text{kinetic} + \frac{e^2}{4\pi\epsilon_0 R} -
+  H_e = \frac{p^2_e}{2m_e} + \frac{e^2}{4\pi\epsilon_0 R} -
   \frac{e^2}{4\pi\epsilon_0 r_1} - \frac{e^2}{4\pi\epsilon_0 r_2}
 \end{equation}
 %
-where $\mathbf{r}_i$ is the displacement of the electron from proton $i$ and
-$H_\text{kinetic}$ is the energy due to the motion of the particles (which we
-will return to shortly).
+where $\mathbf{r}_i$ is the displacement of the electron from proton $i$.
 
 We are looking for a solution wavefunction which reflects the boundary condition
 for $R=\infty$ where the electron will be associated with an atomic
@@ -34,40 +33,45 @@ solution
 
 \subsection{Kinetic terms}
 
-Recall the kinetic term of the Hamiltonian in \ph{ref. eqn.}. This can be
+
+Recall the nuclear term of the Hamiltonian in \ph{ref. eqn.}. This can be
 written in the COM frame of the protons as
 %
 \begin{equation}
-  H_\text{kinetic} = - \frac{\hbar^2}{2\mu} \nabla^2_\mathbf{R} % and electron term?
+  H_\text{n} = - \frac{\hbar^2}{2\mu} \nabla^2_\mathbf{R} % and electron term?
 \end{equation}
 it is instructive to expand the $\nabla_\mathrm{R}$ operator, as this will
 expose the radial and rotational parts of the kinetic Hamiltonian,
+% TODO Check sign
 \begin{equation}
-  H_\text{kinetic} = \frac{\hbar^2}{2\mu R^2}\left[ -\frac{\dd}{\dd R}\left(R^2
-  \frac{\dd}{\dd R} \right) + \mathbf{N^2}.
+  H_n = \frac{\hbar^2}{2\mu R^2}\left[ \frac{\dd}{\dd R}\left(R^2
+  \frac{\dd}{\dd R}\right) + \mathbf{N^2} \right].
   \label{basics:eq:Hkinetic}
 \end{equation}
-Here we have introduced $\mathbf{N}$, which is the orbital angular momentum
-operator for the nucleii. i.e. the kinetic Hamiltonian has two parts:
-oscillatory motion in the radial direction, and rotational (the first and second
-terms respectively). The total Hamiltonian is
+%
+We can now start to anticipate the solutions: the first term looks like an
+oscillation in $R$, and the second term is the usual orbital angular momentum
+operator
+%
 \begin{equation}
-  H = H_\text{electronic} + H_\text{vibrational} + H_\text{rotational}.
+  N^2 = \frac{1}{\sin\theta}\frac{\partial}{\partial
+  \theta}\left(\sin\theta\frac{\partial}{\partial\theta}\right) +
+  \frac{1}{\sin^2\theta}\frac{\partial^2}{\partial^2\phi}.
 \end{equation}
-% TODO Do I need to clarify what each term corresponds to?
 
-A Hamiltonian like this could perhaps be solved by a separated wave function
-\begin{equation}
-  \ket{\psi} = \ket{\psi_e} \ket{\psi_v} \ket{\psi_r}
-\end{equation}
-however, this is not possible in this case, because the electronic Hamiltonian
-term has some dependence on $R$. 
+At this stage we have a Hamiltonian of the form $H = H_e + H_n$ and
+$\ket{\psi_e}$, which is some wave function that solves the Schr\"odinger
+equation for $H_e$ only. To find the wavefunctions for $H$, it might make sense
+to look for a separable solution $\ket{\psi} = \ket{\psi_e}\ket{\psi_n}$. We
+expect $\ket{\psi_n}$ to contain some information about the vibration and
+rotation of the nucleii. However, this is not so simple because $H_e$ has
+dependence on $R$.
 
 It is at this point that we make the \emph{Born-Oppenheimer approximation}: we
 assume that this dependence of the electronic wavefunction on $R$ can be
 ignored, so that a separated wavefunction can solve the Schr\"odinger equation
-for our Hamiltonian. In making this approximation we are essentialy claiming
-that the timescale of nuclear motion and electronic motion are vastly different:
-the nucleii are stationary on the timescale of electronic motion (we will
-justify this below). This means that $R$ can be treated like a parameter of the
+for $H$. In making this approximation we are essentialy claiming that the
+timescale of nuclear motion and electronic motion are vastly different: the
+nucleii are stationary on the timescale of electronic motion (we will justify
+this below). This means that $R$ can be treated like a parameter of the
 electronic state.
